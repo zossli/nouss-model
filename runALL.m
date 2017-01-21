@@ -1,0 +1,5 @@
+close all;
+runnerSchieferWurfOhneLuftwiderstand;
+runnerSchieferWurfMitLuftwiderstand;
+runnerGUI;
+runnerReadFromExcel;
