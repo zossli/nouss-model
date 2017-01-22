@@ -12,4 +12,4 @@ x=(1:1000);
 
 [y, landing] = ohneLuftwiderstand(x, alpha, v , g, 0);
 plot(x(1:landing),y(1:landing));
-title('ohne Luftwiderstand');
+%title('ohne Luftwiderstand');

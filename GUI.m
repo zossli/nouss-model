@@ -70,7 +70,7 @@ if holdOn
 end
 [x, y] = mitLuftwiderstand(t, angle, speed, cw, rho, A, m, g);
 maxt = find(y<0,1);
-if length(maxt)==0
+if isempty(maxt)
     maxt = length(x)
 end
 plot(x([1:maxt]),y([1:maxt]));

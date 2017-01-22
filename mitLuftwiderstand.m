@@ -29,20 +29,3 @@ else
     y(i) = (v^2/g)*(-((g*(t(i)-tu))/v)-log(((1+exp((-2*g*(t(i)-tu))/v))/2)*cos((g*tu)/v)));
 end
 end 
-
-% %Geschwindigkeit bei der Landung
-% neg=find(y<0);
-% y2 = y(neg(1)-1);
-% y1 = y(neg(1)-2);
-% 
-% x2 = x(neg(1)-1);
-% x1 = x(neg(1)-2);
-% 
-% t2 = t(neg(1)-1);
-% t1 = t(neg(1)-2);
-% 
-% s = sqrt((x2-x1)^2+(y2-y1)^2);
-% dt = t2-t1;
-% 
-% vlanding = (s/dt)*3.6;
-% landing = x2;

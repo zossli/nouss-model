@@ -14,7 +14,7 @@ input =  xlsread('data.xlsx');
 
 %konstanten definieren
 aufloesung = 0.04; %in Sekunden
-dauer = 12; %in sekunden
+dauer = 360; %in sekunden
 cw = 0.055; %Cw-Wert (Annahme)
 rho = 1.293; %Luftdichte
 A = 0.0062; %Stirnfl?che
@@ -57,6 +57,16 @@ for i=2:2:(size(input,1)*2)
         ymax = tymax;
     end
 end
+%dieser Abschnitt wird ben?tigt, falls die Zeit nicht ausreicht um die
+%Landung zu erreichen.
+if xmax == 0
+   txmax = max(max(data(:,(1:2:size(data,2)))));
+   xmax = max(max(datao(:,(1:2:size(datao,2)))));
+   if txmax > xmax
+       xmax = txmax;
+   end
+end
+
 %Raum hinzufuegen, dass Linie nicht direkt an Rand klebt.
 xmax = xmax + 2; ymax = ymax + 2;
 

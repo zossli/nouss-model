@@ -19,4 +19,4 @@ t = 0:aufloesung:dauer;
 [x, y] = mitLuftwiderstand(t, alpha, v, cw,rho,A,m,g);
 plot(x,y);
 ylim([0 inf]);
-title('mit Luftwiderstand');
+%title('mit Luftwiderstand');
