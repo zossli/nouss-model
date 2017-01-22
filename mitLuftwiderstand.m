@@ -1,7 +1,5 @@
 function [x, y] =  mitLuftwiderstand(t, winkel, geschwindigkeit, cw,rho,A,m,g)
 
-
-
 abschlaggeschwindigkeit = geschwindigkeit*3.6; %in kmh
 
 alpha = winkel;
